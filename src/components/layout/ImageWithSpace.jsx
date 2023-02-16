@@ -21,7 +21,7 @@ const StyledImage = styled.div`
   
 `
 const StyledConatainer = styled.div`
- background-color: white;
+ background-color: ${props => props.theme.white};
  padding: 30px 50px;
 
  @media (min-width: ${WIDTH_BREAK}) { 
