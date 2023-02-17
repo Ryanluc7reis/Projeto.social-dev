@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 
+
 import ImageWithSpace from '../src/components/layout/ImageWithSpace'
 import H1 from '../src/components/typography/H1'
 import H2 from '../src/components/typography/H2.jsx'
@@ -23,23 +24,25 @@ const Text = styled.p`
 `
 
 
-function LoginPage () {
+function SignupPage () {
   return (
     <ImageWithSpace>
       <H1># Social Dev</H1>
-      <H4>Tudo que acontece no mundo dev, está aqui!</H4>
+      <H4>Tudo que acontece no mundo dev, está aqui</H4>
       <FormContainer>
-        <H2>Entre em sua conta</H2>
+        <H2>Crie sua conta</H2>
         <Form>
-            <Input label="Email ou usuário" type="email" />
+            <Input label="Nome" />
+            <Input label="Sobrenome" />
+            <Input label="Usuário" />
+            <Input label="Email " type="email" />
             <Input label="Senha" type="password" />
             <Button>Entrar</Button>
         </Form>
-        <Text>Não possui uma conta ? <Link href="/login">Faça seu cadastro</Link></Text>
-      </FormContainer>
-           
+        <Text>Ja possui uma conta ? <Link href="/signup">Faça seu login</Link></Text>
+      </FormContainer>           
     </ImageWithSpace> 
   )
 
 }
-export default LoginPage
+export default SignupPage
