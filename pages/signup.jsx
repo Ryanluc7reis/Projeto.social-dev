@@ -39,7 +39,7 @@ function SignupPage () {
             <Input label="Senha" type="password" />
             <Button>Entrar</Button>
         </Form>
-        <Text>Ja possui uma conta ? <Link href="/signup">Faça seu login</Link></Text>
+        <Text>Ja possui uma conta ? <Link href="/login">Faça seu login</Link></Text>
       </FormContainer>           
     </ImageWithSpace> 
   )
