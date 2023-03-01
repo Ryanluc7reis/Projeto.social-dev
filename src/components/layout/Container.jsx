@@ -4,6 +4,11 @@ import styled from "styled-components"
 const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
+
+  @media (max-weight 700px) {
+    padding: 10px;
+
+  }
 `
 const StyledChildren = styled.div`
   max-width: 700px;
