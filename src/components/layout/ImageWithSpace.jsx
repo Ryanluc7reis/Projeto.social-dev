@@ -12,7 +12,7 @@ const StyledImage = styled.div`
   background-size: cover;
   
   width: 100%;
-  height: 100vh;
+  height: 125vh;
 
   
  @media (max-width: ${WIDTH_BREAK}) {

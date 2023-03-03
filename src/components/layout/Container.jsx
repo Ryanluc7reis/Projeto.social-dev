@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 
 const StyledContainer = styled.div`
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
 
   @media (max-weight 700px) {
     padding: 10px;
@@ -11,8 +11,8 @@ const StyledContainer = styled.div`
   }
 `
 const StyledChildren = styled.div`
-  max-width: 700px;
-  width: 100%;
+max-width: 700px;
+width: 100%;
 `
 
 function Container ({children}) {

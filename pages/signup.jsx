@@ -10,7 +10,7 @@ import Button from '../src/components/inputs/Button'
 import Input from '../src/components/inputs/Input'
 
 const FormContainer = styled.div`
-  margin-top: 60px;
+margin-top: 60px;
 `
 const Form = styled.form`
  display: flex;
