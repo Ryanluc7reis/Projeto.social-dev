@@ -9,3 +9,10 @@ export const signupSchema = Joi.object({
   .max(50).message('O campo "usuário" pode ter no máximo {{#limit}} caracters.')
   .min(6).message('O campo "senha" precisa ter no minimo {{#limit}} caracters.'),
 })
+export const loginSchema = Joi.object({
+  userOrEmail : Joi.string().required(),
+  password : Joi.string().required()
+  .max(50).message('O campo "usuário" pode ter no máximo {{#limit}} caracters.')
+  .min(6).message('O campo "senha" precisa ter no minimo {{#limit}} caracters.'),
+  
+})
