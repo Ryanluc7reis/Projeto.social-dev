@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 
-const WIDTH_BREAK = '700px'
+const WIDTH_BREAK = '600px'
 const StyledFlex = styled.div`
   display: flex;
 `
@@ -12,7 +12,7 @@ const StyledImage = styled.div`
   background-size: cover;
   
   width: 100%;
-  height: 125vh;
+  height: 100vh;
 
   
  @media (max-width: ${WIDTH_BREAK}) {
