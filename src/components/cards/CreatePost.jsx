@@ -47,7 +47,6 @@ function CreatePost ({username}) {
   const {control,handleSubmit, formState: { isValid }, reset } = useForm({
     resolver: joiResolver(createPostSchema),
     mode: 'all'
-
   })
 
   const onSubmit =  async (data) => {
