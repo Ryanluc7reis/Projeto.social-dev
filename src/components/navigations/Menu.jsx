@@ -32,7 +32,7 @@ const  Menu =  ({ options = [] }) => {
 
   useEffect(() => {
     const handleClickOutSide = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)){
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
         setShow(false)
       }
     }
@@ -47,14 +47,14 @@ const  Menu =  ({ options = [] }) => {
     <Dots src='/three-dots.svg' height='20px' onClick={() => setShow(!show)}  />
     <StyledMenu show={show} ref={menuRef} onBlur={() => setShow(false)}> 
       {
-        options.map((option, pos) => {
+        options.map((option, pos) => 
           <StyledOption
             key={`menu-option-${pos}`}
             onClick={option.onClick}
           >
             {option.text}
           </StyledOption>
-        })
+        )
       }
     </StyledMenu>
   </StyledContainerMenu>

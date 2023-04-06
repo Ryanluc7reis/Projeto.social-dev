@@ -14,3 +14,9 @@ export const getPosts = async (limit = 10) => {
   .sort({createdDate: -1}) // do post mais novo pro mais antigo
   .limit(limit)
 }
+export const deletePost = async (id, user) => {
+  return await Post.findOneAndDelete({
+    _id: id,
+    createdBy: user.id
+  })
+}
