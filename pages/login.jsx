@@ -50,6 +50,7 @@ function LoginPage () {
         if ( response.data === 'password incorrect') {
             setError('password',{
               message : 'A senha está incorreta.'
+              
             })
         }
       else if (response.data === 'not found') {
