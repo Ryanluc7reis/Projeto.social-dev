@@ -19,7 +19,7 @@ const PostContainer = styled.div`
 
 
   @media (max-width: 500px) {
-    padding; 20px;
+    padding: 20px;
   }
 `
 const Title = styled.div`

@@ -17,8 +17,7 @@ const StyledImage = styled.div`
   
  @media (max-width: ${WIDTH_BREAK}) {
   display: none;
-  
-  
+ }
 `
 const StyledConatainer = styled.div`
  background-color: ${props => props.theme.white};
@@ -42,6 +41,7 @@ const StyledConatainer = styled.div`
     content: '';
     margin: auto;
   }
+}
 `
 
 

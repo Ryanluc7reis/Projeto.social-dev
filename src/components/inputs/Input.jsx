@@ -7,7 +7,7 @@ const InputContainer = styled.div`
 
 `
 const StyledLabel = styled.p`
-  font-wight:bold;
+  font-weight:bold;
   font-size: 14px;
   margin-bottom: 5px;
 `
