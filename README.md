@@ -7,7 +7,8 @@ A aplicação consiste em um feed de posts , onde o usuário pode criar vários 
 Link do projeto no ar: [https://social-dev-wine.vercel.app/login ](https://social-dev-wine.vercel.app/login)
 
 ## Layouts
-![social1](https://github.com/Ryanluc7reis/Projeto.social-dev/assets/112912919/3e1b45be-c5cd-42a1-8e2a-d9d04156a4a3)
+![social](https://github.com/Ryanluc7reis/social-dev-project/assets/112912919/170a2bac-da22-495f-8044-07feb2400dab)
+
 ![social2](https://github.com/Ryanluc7reis/Projeto.social-dev/assets/112912919/8becc96c-786e-4b94-8087-7ee6cab4f75b)
 
 ## Tecnologias utilizadas
