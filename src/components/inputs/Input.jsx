@@ -46,7 +46,7 @@ const Input = ({label, name ,control, defaultValue='', ...props }) => {
         fieldState : { error }
         
      } = useController({ name, control, defaultValue })                                                             
-  return (                                                      // o parametro do "forwardRef"(precisa ser importad do react) é o componente todo como esta a abaixo  e tbm serve para dar referencia para o react e JS para o componente  input certo q esta esprando junto com o ref    // "...props " significa q todas as props que nao for label ,ira substituir automaticamente todas as outras props   
+  return (                                                   
      <InputContainer>
          <StyledLabel> {label}</StyledLabel>
          <StyledInput placeholder={label} error={error} {...props} value={value} onChange={onChange} />

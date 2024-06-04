@@ -58,7 +58,7 @@ function LoginPage () {
           message : 'Usuário ou e-mail não encontrado.'
         })
       }
-    } finally { // 'finally'= depois de  entra tanto no try quanto no catch ele entra no finally
+    } finally { 
       setLoading(false) 
     }
   }

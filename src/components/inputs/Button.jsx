@@ -31,4 +31,3 @@ const Button = ({ children, loading, disabled, ...props }) => {
   )
 }
 export default Button
-// '${props => !props.disabled && 'cursor: pointer;'} = SE NAO estiver desabilitador ,aparecer cursor

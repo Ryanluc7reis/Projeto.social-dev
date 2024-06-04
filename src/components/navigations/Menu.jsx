@@ -25,7 +25,6 @@ const StyledOption = styled.div`
 const StyledContainerMenu = styled.div` 
   position: relative ;
 `
-//'onBlur' = qunado clicar em algum deck de opçoes e sair clicando fora 
 const  Menu =  ({ options = [] }) => {
   const [show, setShow] = useState(false)
   const menuRef = useRef(null)

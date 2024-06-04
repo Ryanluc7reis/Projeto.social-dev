@@ -50,7 +50,7 @@ function Post ({ text, user , date, isOwner, id }) {
         }
       })
       if (response.status === 200) 
-        mutate(`${process.env.NEXT_PUBLIC_API_URL}/api/post`) // esquecer oq tem no post e pesquisar novamente
+        mutate(`${process.env.NEXT_PUBLIC_API_URL}/api/post`) 
     } catch (err) {
       console.error(err)
     }

@@ -10,8 +10,8 @@ export const createPost = async (body, user) => {
 
 export const getPosts = async (limit = 10) => {
   return await Post.find()
-  .populate('createdBy', 'user')  // para dizer qual usuario q criou o post , 'createdBy' tirado do post.models.js
-  .sort({createdDate: -1}) // do post mais novo pro mais antigo
+  .populate('createdBy', 'user') 
+  .sort({createdDate: -1}) 
   .limit(limit)
 }
 export const deletePost = async (id, user) => {
@@ -28,6 +28,6 @@ export const editPost = async (body, user) => {
   },{
     text: body.text
   },{
-    new: true // mongoBD vai manda pra nós o documento ja atualizado
+    new: true 
   })
 }

@@ -3,7 +3,7 @@ import { hashPassword, compareSync  } from "../../utils/bcrypt"
 
 import User from './user.model'
 
-export const signupUser = async (body) => { //quando a função é somente export const ,deve importar assim : import {signupUser} from 
+export const signupUser = async (body) => { 
   try {
     const user = {
       ...body,

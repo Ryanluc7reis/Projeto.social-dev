@@ -38,7 +38,7 @@ const PostContainer = styled.div`
   margin-top: 20px;
 `
 
-const fetcher = url => axios.get(url).then(res => res.data) // '.then()' é uma forma de esperar a execução acontecer
+const fetcher = url => axios.get(url).then(res => res.data) 
 
 function HomePage ({ user }) {
   const { data } = useSWR( `${process.env.NEXT_PUBLIC_API_URL}/api/post`, fetcher)

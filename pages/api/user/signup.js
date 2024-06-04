@@ -25,7 +25,7 @@ signup.post(validate( {body: signupSchema } ),async (req,res) => {
   } catch (err) {
     if (err.code === 11000) {
       return res.status(400).send({
-        code :11000, // pego do console
+        code :11000, 
         duplicatedKey : Object.keys(err.keyPattern)[0]
       })
     }   

@@ -10,7 +10,7 @@ import Button from '../inputs/Button'
 const EditPost = ({ id, text, onSave }) => {
   const {control,handleSubmit, formState: { isValid }, } = useForm({
     resolver: joiResolver(createPostSchema),
-    mode: 'all' // para validar sem vc precisar apertar o botao ,ele ja valida quando vc começa a digitar.
+    mode: 'all' 
   })
 
   const handleSaveEdit = async (data) => {
