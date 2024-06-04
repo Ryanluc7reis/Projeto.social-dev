@@ -28,16 +28,47 @@ const Form = styled.form`
 const Text = styled.p`
  text-align : center;
 `
-
-
-
+const Barra = styled.div`
+  width: 90%;
+  height: 4px;
+  background: grey;
+  border-radius: 10px;
+`
+const ButtonAlt = styled(Button)`
+  width: 100%;
+  margin: 10px 0px;
+`
 function LoginPage () {
   const router = useRouter()
   const {control ,handleSubmit, formState: { errors }, setError } = useForm({
     resolver: joiResolver(loginSchema)      
   })  
   const [loading, setLoading] = useState(false)
-  
+
+  const onSubmitVisit = async () => {
+    try {
+      setLoading(true)
+      const { status } = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/user/login`, {
+        userOrEmail: 'visitante',
+        password: 'visitante123'
+      })
+      if (status === 200) {
+        router.push('/')
+      }
+    } catch ({ response }) {
+      if (response.data === 'password incorrect') {
+        setError('password', {
+          message: 'A senha está incorreta.'
+        })
+      } else if (response.data === 'not found') {
+        setError('userOrEmail', {
+          message: 'Usuário ou e-mail não encontrado.'
+        })
+      }
+    } finally {
+      setLoading(false)
+    }
+  }
   const onSubmit = async (data) => {
     try {
       setLoading(true)
@@ -74,6 +105,12 @@ function LoginPage () {
             <Input label="Senha" type="password" name='password' control={control} />
             <Button loading={loading} type='submit' disabled={Object.keys(errors).length > 0 }>Entrar</Button>
         </Form>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
+          <Barra />
+          <Text>Ou</Text>
+          <Barra />
+        </div>
+        <ButtonAlt loading={loading} onClick={onSubmitVisit}> Logar como visitante</ButtonAlt>
         <Text>Não possui uma conta ? <Link href="/signup">Faça seu cadastro</Link></Text>
       </FormContainer>
            

@@ -31,8 +31,6 @@ const Text = styled.p`
  text-align : center;
 `
 
-
-
 function SignupPage () { 
     const router = useRouter() 
     const {control ,handleSubmit, formState: { errors }, setError } = useForm({
@@ -45,7 +43,7 @@ function SignupPage () {
       setLoading(true)
       const { status } = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/user/signup`, data)
       if (status === 201) {
-        router.push('/')
+        router.push('/login')
       }
     } catch (err) {
       if (err.response.data.code === 11000) {
@@ -58,8 +56,7 @@ function SignupPage () {
       setLoading(false)
     }
   }
-  console.log(errors)
-    
+
   return (
     <ImageWithSpace>
       <H1># Social Dev</H1>

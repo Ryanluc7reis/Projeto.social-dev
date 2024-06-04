@@ -7,14 +7,11 @@ const StyledFlex = styled.div`
 `
 const StyledImage = styled.div`
   background-image: url('${props => props.image}');
-  background-position: rigth;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
-  
   width: 100%;
-  height: 125vh;
-
-  
+  min-height: 100vh;
  @media (max-width: ${WIDTH_BREAK}) {
   display: none;
  }
